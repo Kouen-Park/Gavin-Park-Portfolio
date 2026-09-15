@@ -136,7 +136,7 @@ export const projects: Project[] = [
     media: [
       { src: "/images/disciple-world.png", alt: "Pixel-art investigation environment in The Thirteenth Disciple", width: 1600, height: 900, caption: "An explorable field scene from the playable prototype." },
       { src: "/images/disciple-journal.png", alt: "The Thirteenth Disciple journal interface", width: 1600, height: 900, caption: "The journal keeps collected evidence and narrative context legible." },
-      { src: "/images/disciple-cutscene.png", alt: "Pixel-art tomb cutscene in The Thirteenth Disciple", width: 1600, height: 900, caption: "A narrative scene from the six-chapter arc." },
+      { src: "/images/disciple-cutscene.png", alt: "Pixel-art tomb cutscene in The Thirteenth Disciple", width: 1280, height: 720, caption: "A narrative scene from the six-chapter arc." },
     ],
     links: [{ label: "View repository", href: "https://github.com/Kouen-Park/thethirteenthdisciple" }],
     constraints: ["Keep research provenance distinct from invented narrative connective tissue.", "Support a complete chapter arc without duplicating core scene logic.", "Make keyboard and controller-era interactions readable in a pixel-art presentation."],
