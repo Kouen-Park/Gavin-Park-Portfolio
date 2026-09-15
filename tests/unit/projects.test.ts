@@ -31,4 +31,13 @@ describe("portfolio project data", () => {
     expect(archiveProject.role).toBe("Team coursework contributor");
     expect(archiveProject.status).toBe("coursework");
   });
+
+  it("keeps the featured BirdieBuddy case aligned with its verified platform", () => {
+    const birdieBuddy = projects[0];
+    expect(birdieBuddy.featured).toBe(true);
+    expect(birdieBuddy.stack).toContain("ASP.NET Core 10");
+    expect(birdieBuddy.stack).toContain("EF Core 10");
+    expect(birdieBuddy.liveDemo).toBe("https://birdiebuddy.onrender.com");
+    expect(birdieBuddy.limitations.join(" ")).toMatch(/iOS.+not represented as deployed/i);
+  });
 });

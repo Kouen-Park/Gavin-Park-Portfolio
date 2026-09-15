@@ -28,9 +28,9 @@ test("home makes BirdieBuddy the featured project and exposes recruiter actions"
 
 test("BirdieBuddy case study exposes the recruiter demo path", async ({ page }) => {
   await page.goto("/work/birdie-buddy");
-  await expect(page.getByRole("heading", { name: /See the recovery flow/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Try the public beta/i })).toBeVisible();
   await expect(page.locator(".demo-guide li")).toHaveCount(3);
-  await expect(page.locator(".case-actions .action-note")).toBeVisible();
+  await expect(page.locator(".case-actions").getByRole("link", { name: /Open live demo/i })).toHaveAttribute("href", "https://birdiebuddy.onrender.com");
   await expect(page.locator(".case-actions").getByRole("link", { name: /View repository/i })).toBeVisible();
 });
 

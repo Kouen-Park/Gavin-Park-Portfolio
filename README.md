@@ -28,4 +28,4 @@ Project facts live in `data/projects.ts` and were transcribed from the SecondBra
 
 Set `NEXT_PUBLIC_SITE_URL` (or let Vercel provide `VERCEL_PROJECT_PRODUCTION_URL`) before production deployment so canonical URLs, sitemap, robots, and JSON-LD point at the deployed origin.
 
-Set `NEXT_PUBLIC_BIRDIEBUDDY_DEMO_URL` only after the deployed BirdieBuddy recruiter journey has been verified. The live-demo CTA remains hidden and the case study shows a verification note when this value is absent.
+BirdieBuddy's documented Render deployment is used as the default live-demo URL. Set `NEXT_PUBLIC_BIRDIEBUDDY_DEMO_URL` to override it for a different verified deployment.

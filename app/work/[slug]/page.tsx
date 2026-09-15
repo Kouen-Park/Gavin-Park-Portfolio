@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
 
       {project.demoSteps && <section className="demo-guide shell" aria-labelledby="demo-guide-title">
-        <div><p className="eyebrow">Recruiter demo path</p><h2 id="demo-guide-title">See the recovery flow<br />in three steps.</h2></div>
+        <div><p className="eyebrow">Recruiter demo path</p><h2 id="demo-guide-title">Try the public beta<br />in three steps.</h2></div>
         <ol>{project.demoSteps.map((step, index) => <li key={step}><span>0{index + 1}</span><p>{step}</p></li>)}</ol>
       </section>}
 
