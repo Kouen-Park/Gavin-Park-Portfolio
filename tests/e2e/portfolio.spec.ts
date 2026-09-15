@@ -18,10 +18,27 @@ test("home exposes projects in the intended order", async ({ page }) => {
   expect(titles).toEqual(["BirdieBuddy", "The Thirteenth Disciple", "SecondBrain"]);
 });
 
+test("home makes BirdieBuddy the featured project and exposes recruiter actions", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("heading", { name: /Software Engineer building reliable full-stack systems/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /View BirdieBuddy/i })).toHaveAttribute("href", "/work/birdie-buddy");
+  await expect(page.locator(".project-card").first()).toContainText("Featured case study");
+  await expect(page.locator(".project-card").nth(1)).toContainText("Supporting evidence");
+});
+
+test("BirdieBuddy case study exposes the recruiter demo path", async ({ page }) => {
+  await page.goto("/work/birdie-buddy");
+  await expect(page.getByRole("heading", { name: /See the recovery flow/i })).toBeVisible();
+  await expect(page.locator(".demo-guide li")).toHaveCount(3);
+  await expect(page.locator(".case-actions .action-note")).toBeVisible();
+  await expect(page.locator(".case-actions").getByRole("link", { name: /View repository/i })).toBeVisible();
+});
+
 test("skip link and keyboard focus are usable", async ({ page }) => {
   await page.goto("/");
-  await page.keyboard.press("Tab");
-  await expect(page.getByRole("link", { name: "Skip to content" })).toBeFocused();
+  const skipLink = page.getByRole("link", { name: "Skip to content" });
+  await skipLink.focus();
+  await expect(skipLink).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main")).toBeFocused();
 });

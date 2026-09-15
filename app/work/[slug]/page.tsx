@@ -35,19 +35,29 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <section className="case-hero shell">
         <Link className="back-link" href="/#work"><span aria-hidden="true">←</span> Selected work</Link>
         <div className="case-title-grid">
-          <div><p className="eyebrow">Case study · {project.status}</p><h1>{project.title}</h1></div>
+          <div><p className="eyebrow">{project.featured ? "Featured case study" : "Supporting case study"} · {project.status}</p><h1>{project.title}</h1></div>
           <p className="case-outcome">{project.outcome}</p>
         </div>
         <dl className="case-meta">
           <div><dt>Role</dt><dd>{project.role}</dd></div><div><dt>Period</dt><dd>{project.period}</dd></div>
           <div><dt>Status</dt><dd>{project.status}</dd></div><div><dt>Stack</dt><dd>{project.stack.join(" · ")}</dd></div>
         </dl>
+        <div className="case-actions">
+          {project.liveDemo && <a className="button-link" href={project.liveDemo} rel="noreferrer" target="_blank">Open live demo <span aria-hidden="true">↗</span></a>}
+          {project.links.map((link) => <a className="text-link" key={link.href} href={link.href} rel="noreferrer" target="_blank">{link.label} <span aria-hidden="true">↗</span></a>)}
+          {!project.liveDemo && project.slug === "birdie-buddy" && <p className="action-note">Live demo link is pending deployment verification.</p>}
+        </div>
       </section>
 
       <section className="case-overview shell" aria-labelledby="overview-title">
         <Reveal className="case-intro"><p className="eyebrow">The system</p><h2 id="overview-title">{project.summary}</h2></Reveal>
         <Reveal className="constraint-list"><p className="eyebrow">Constraints</p><ul>{project.constraints.map((item) => <li key={item}>{item}</li>)}</ul></Reveal>
       </section>
+
+      {project.demoSteps && <section className="demo-guide shell" aria-labelledby="demo-guide-title">
+        <div><p className="eyebrow">Recruiter demo path</p><h2 id="demo-guide-title">See the recovery flow<br />in three steps.</h2></div>
+        <ol>{project.demoSteps.map((step, index) => <li key={step}><span>0{index + 1}</span><p>{step}</p></li>)}</ol>
+      </section>}
 
       <section className="evidence-section shell" aria-labelledby="evidence-title">
         <div className="section-label"><p className="eyebrow">Evidence rail</p><h2 id="evidence-title">From pressure<br />to present state.</h2></div>
@@ -77,7 +87,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <section className="case-end shell">
+        {project.liveDemo && <a className="button-link" href={project.liveDemo} rel="noreferrer" target="_blank">Open live demo <span aria-hidden="true">↗</span></a>}
         {project.links.map((link) => <a className="button-link" key={link.href} href={link.href} rel="noreferrer" target="_blank">{link.label} <span aria-hidden="true">↗</span></a>)}
+        {!project.liveDemo && project.slug === "birdie-buddy" && <p className="action-note">Live demo link is pending deployment verification.</p>}
         <Link className="text-link" href="/#work">Back to selected work <span aria-hidden="true">↑</span></Link>
       </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWork).replace(/</g, "\\u003c") }} />

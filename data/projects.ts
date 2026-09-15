@@ -37,7 +37,19 @@ export interface Project {
   constraints: string[];
   decisions: { title: string; detail: string }[];
   limitations: string[];
+  featured?: boolean;
+  liveDemo?: string;
+  demoSteps?: string[];
+  proof?: {
+    problem: string;
+    role: string;
+    reliability: string;
+    verified: string;
+    status: string;
+  };
 }
+
+const birdieBuddyDemoUrl = process.env.NEXT_PUBLIC_BIRDIEBUDDY_DEMO_URL;
 
 export const projects: Project[] = [
   {
@@ -115,6 +127,16 @@ export const projects: Project[] = [
       { title: "Test the seams", detail: "Verification concentrates on the transitions where browser, HTTP, and PostgreSQL behavior meet." },
     ],
     limitations: ["Physical iPhone Safari verification is still pending.", "The chart below visualizes repository fixture data, not measured product impact."],
+    featured: true,
+    liveDemo: birdieBuddyDemoUrl,
+    demoSteps: ["Open the deployed app", "Start or open a sample round", "Try score entry and recovery/sync state"],
+    proof: {
+      problem: "Keep live score entry usable when connectivity drops.",
+      role: "Independent product engineering",
+      reliability: "PostgreSQL as source of truth with a recoverable browser outbox.",
+      verified: "HTTP, database, and browser coverage around scoring and recovery.",
+      status: "Active beta; physical iPhone Safari verification remains open.",
+    },
   },
   {
     slug: "the-thirteenth-disciple",

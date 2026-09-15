@@ -8,6 +8,7 @@ export function SiteHeader() {
         <Link className="wordmark" href="/" aria-label="Gavin Park, home">Gavin Park</Link>
         <nav aria-label="Primary navigation">
           <Link href="/#work">Work</Link>
+          <Link href="/work/birdie-buddy">BirdieBuddy</Link>
           <Link href="/#method">Method</Link>
           <a href="https://github.com/Kouen-Park" rel="noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
         </nav>
