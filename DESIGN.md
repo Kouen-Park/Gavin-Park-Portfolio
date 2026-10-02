@@ -15,7 +15,9 @@ The memorable device is the Evidence Rail, a thin continuous route that connects
 - **Signal blue** (`#2457D6`): links, keyboard focus, and global interactive state.
 - **Quiet rule** (`#CBD4D0`): dividers, rail scaffolding, and image boundaries.
 
-Project accents are local and never compete on one surface: BirdieBuddy uses deep fairway green (`#1F5B4B`), The Thirteenth Disciple uses fired ochre (`#B36A36`), SecondBrain uses archive violet (`#665A8E`), and Music Webapp uses muted wine (`#8E4750`).
+Project accents are local and never compete on one surface: BirdieBuddy uses deep fairway green (`#1F5B4B`), Kkok uses soft navy (`#344866`), Noye uses archive violet (`#665A8E`), the supporting Thirteenth Disciple uses fired ochre (`#B36A36`), and Music Webapp uses muted wine (`#8E4750`).
+
+Core work is BirdieBuddy → Kkok → Noye. The left column stays simple: title, one-sentence introduction, stack tags, and case-study link. Do not repeat the five-field proof block or source-review date here. Keep the right-hand Evidence Rail on wide screens; full dated evidence remains in the case studies at every width. Supporting work uses a smaller editorial row. SecondBrain remains method context, not another project card. Noye's architecture map is explicitly not a fabricated screenshot.
 
 ## 3. Typography Rules
 

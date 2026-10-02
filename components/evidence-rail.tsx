@@ -31,7 +31,7 @@ export function EvidenceRail({ evidence, compact = false }: { evidence: Evidence
             <p className="eyebrow">{item.stage}</p>
             <h3>{item.claim}</h3>
             {!compact && <p>{item.detail}</p>}
-            {!compact && <p className="source">Verified {item.verificationDate} · {item.source}</p>}
+            {!compact && <p className="source">Recorded <time dateTime={item.verificationDate}>{item.verificationDate}</time> · {item.sourceUrl ? <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source} <span aria-hidden="true">↗</span></a> : item.source}</p>}
           </div>
         </li>
       ))}

@@ -9,7 +9,7 @@ export function Hero() {
       <h1 id="hero-title">Software Engineer<br />building reliable<br /><em>full-stack systems.</em></h1>
       <div className="hero-foot">
         <div>
-          <p>I build backend-aware products and interactive systems with recoverability, testing, and clear engineering decisions close at hand.</p>
+          <p>I build web and mobile products with backend engineering, recoverability, private collaboration, and source-grounded local AI — backed by testing and clear engineering decisions.</p>
           <p className="hero-availability">Open to internships, graduate programmes, and early-career roles.</p>
         </div>
         <div className="hero-actions">
