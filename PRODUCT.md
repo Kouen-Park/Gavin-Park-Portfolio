@@ -24,12 +24,14 @@ The portfolio treats projects as evidence trails, not as a gallery of screenshot
 
 ## Operating Context
 
-The portfolio is evaluated in short recruiter scans and deeper technical review. Source material comes from Gavin's SecondBrain wiki and the local repositories for BirdieBuddy, The Thirteenth Disciple, Music Webapp, and SecondBrain itself.
+The portfolio is evaluated in short recruiter scans and deeper technical review. Source material comes from Gavin's SecondBrain wiki and local repositories, cross-checked on 2 October 2026. See CONTENT.md for dated baselines and release boundaries.
 
 ## Capabilities and Constraints
 
-- English-only v1 with a home page and three case-study routes.
-- Featured order: BirdieBuddy, The Thirteenth Disciple, SecondBrain.
+- English portfolio copy with a home page and four case-study routes; the product name 꼭 is Korean.
+- Core order: BirdieBuddy, 꼭 (kkok), Noye. BirdieBuddy remains featured.
+- The Thirteenth Disciple is a compact supporting project, not a core entry.
+- SecondBrain is working-method context only; the former route redirects to that section.
 - Music Webapp appears as a compact coursework archive item.
 - GitHub is the only public contact route in v1.
 - Claims, figures, roles, and statuses must be traceable to supplied local evidence; no invented outcomes or testimonials.
@@ -46,6 +48,8 @@ The portfolio is evaluated in short recruiter scans and deeper technical review.
 
 - `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/Project inventory.md`
 - `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/BirdieBuddy.md`
+- `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/꼭.md`
+- `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/Noye.md`
 - `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/The Thirteenth Disciple.md`
 - `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/SecondBrain knowledge base.md`
 - `/Users/gavinpark/Desktop/SecondBrain/wiki/projects/Music Webapp.md`

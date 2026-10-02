@@ -31,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <noscript><style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style></noscript>
         <SiteHeader />
         {children}
         <SiteFooter />

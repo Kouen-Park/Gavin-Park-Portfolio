@@ -1,7 +1,9 @@
 import { Hero } from "@/components/hero";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
-import { archiveProject, projects } from "@/data/projects";
+import Image from "next/image";
+import Link from "next/link";
+import { archiveProject, projects, supportingProjects } from "@/data/projects";
 
 const method = ["idea", "prototype", "run", "diagnose", "test", "improve"];
 
@@ -12,10 +14,26 @@ export default function Home() {
       <section className="work-section shell" id="work" aria-labelledby="work-title">
         <div className="section-heading">
           <p className="eyebrow">Selected work · 2026</p>
-          <h2 id="work-title">Three systems,<br />shown through evidence.</h2>
-          <p>Each case study follows the same trail: what was difficult, what I decided, what I built, and what the current evidence supports.</p>
+          <h2 id="work-title">Reliable products,<br />different boundaries.</h2>
+          <p>Recoverable scoring, private collaboration, and local AI knowledge. Three core projects, with decisions and dated verification before technology lists.</p>
         </div>
         <div className="project-list">{projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}</div>
+      </section>
+
+      <section className="supporting-section shell" id="supporting-work" aria-labelledby="supporting-title">
+        <div className="supporting-heading"><p className="eyebrow">Supporting work</p><h2 id="supporting-title">A different kind of system.</h2><p>Narrative architecture and reusable game systems, alongside the three core product case studies.</p></div>
+        {supportingProjects.map((project) => <Reveal key={project.slug}>
+          <article className="supporting-project" style={{ "--accent": project.accent } as React.CSSProperties}>
+            <div className="supporting-copy">
+              <p className="eyebrow">Supporting project · {project.status}</p>
+              <h3><Link href={`/work/${project.slug}`}>{project.title}</Link></h3>
+              <p>{project.summary}</p>
+              <p className="supporting-status">Recovery milestone committed and pushed; human playtest, audio, and visual sign-off remain open.</p>
+              <Link className="text-link" href={`/work/${project.slug}`}>Read the supporting case study <span aria-hidden="true">→</span></Link>
+            </div>
+            {project.media[0] && <Image src={project.media[0].src} alt={project.media[0].alt} width={project.media[0].width} height={project.media[0].height} sizes="(max-width: 760px) 100vw, 30vw" />}
+          </article>
+        </Reveal>)}
       </section>
 
       <section className="method-section" id="method" aria-labelledby="method-title">
@@ -24,7 +42,7 @@ export default function Home() {
           <Reveal className="method-flow">
             {method.map((step, index) => <div key={step}><span>0{index + 1}</span><strong>{step}</strong>{index < method.length - 1 && <i aria-hidden="true">→</i>}</div>)}
           </Reveal>
-          <Reveal className="method-note"><p>I keep assumptions visible, run the real thing early, and turn failures into the next concrete test.</p></Reveal>
+          <Reveal className="method-note"><p>I keep assumptions visible, run the real thing early, and turn failures into the next concrete test.</p><p>SecondBrain supports that loop: I keep original sources, dated project records, decisions, and open questions in linked Markdown. It is my working method, not a fourth product in this portfolio.</p></Reveal>
         </div>
       </section>
 
@@ -34,7 +52,7 @@ export default function Home() {
           <h2 id="about-title">Curious about the system<br />behind the screen.</h2>
         </Reveal>
         <Reveal className="about-copy">
-          <p>I’m a University of Auckland computer-science learner and hands-on developer. I work across Python, C#, JavaScript, Flask, ASP.NET, EF Core, and Playwright.</p>
+          <p>I build across C#/.NET, Python/FastAPI, TypeScript/Next.js, SwiftUI, and React Native, with PostgreSQL and local data systems behind the interfaces. I’m also studying computer science at the University of Auckland.</p>
           <p>Outside the build, I’m interested in golf, pixel art, narrative games, AI coding agents, and personal knowledge management. I learn by making a small prototype, running it, diagnosing the failure, testing the fix, and improving the next version.</p>
           <ul className="interest-list" aria-label="Interests"><li>Golf & statistics</li><li>Pixel art & narrative games</li><li>AI-assisted development</li><li>Personal knowledge systems</li></ul>
         </Reveal>

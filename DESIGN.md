@@ -15,7 +15,9 @@ The memorable device is the Evidence Rail, a thin continuous route that connects
 - **Signal blue** (`#2457D6`): links, keyboard focus, and global interactive state.
 - **Quiet rule** (`#CBD4D0`): dividers, rail scaffolding, and image boundaries.
 
-Project accents are local and never compete on one surface: BirdieBuddy uses deep fairway green (`#1F5B4B`), The Thirteenth Disciple uses fired ochre (`#B36A36`), SecondBrain uses archive violet (`#665A8E`), and Music Webapp uses muted wine (`#8E4750`).
+Project accents are local and never compete on one surface: BirdieBuddy uses deep fairway green (`#1F5B4B`), 꼭 uses soft navy (`#344866`), Noye uses archive violet (`#665A8E`), the supporting Thirteenth Disciple uses fired ochre (`#B36A36`), and Music Webapp uses muted wine (`#8E4750`).
+
+Core work is BirdieBuddy → 꼭 → Noye. Each keeps a visible role/decision/verification/status summary at every viewport, even when the compact rail is omitted. Supporting work uses a smaller editorial row. SecondBrain remains method context, not another project card. Noye's architecture map is explicitly not a fabricated screenshot.
 
 ## 3. Typography Rules
 
