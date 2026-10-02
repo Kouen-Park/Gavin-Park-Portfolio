@@ -15,8 +15,10 @@ for (const route of routes) {
 test("home exposes projects in the intended order", async ({ page }) => {
   await page.goto("/");
   const titles = await page.locator(".project-copy h2").allTextContents();
-  expect(titles).toEqual(["BirdieBuddy", "꼭", "Noye"]);
+  expect(titles).toEqual(["BirdieBuddy", "Kkok", "Noye"]);
   await expect(page.locator("#work .project-card")).toHaveCount(3);
+  await expect(page.locator("#work .project-copy dl")).toHaveCount(0);
+  await expect(page.locator("#work .project-copy time")).toHaveCount(0);
   await expect(page.locator("#supporting-work")).toContainText("The Thirteenth Disciple");
   await expect(page.locator("#supporting-work")).toContainText("Supporting project");
   await expect(page.getByRole("link", { name: "SecondBrain", exact: true })).toHaveCount(0);
@@ -34,8 +36,10 @@ test("home makes BirdieBuddy the featured project and exposes recruiter actions"
   await expect(page).toHaveURL(/\/work\/birdie-buddy$/);
 });
 
-test("kkok provides deployed web access without implying TestFlight availability", async ({ page }) => {
+test("Kkok provides deployed web access without implying TestFlight availability", async ({ page }) => {
   await page.goto("/work/kkok");
+  await expect(page.getByRole("heading", { level: 1, name: "Kkok", exact: true })).toBeVisible();
+  await expect(page).toHaveTitle("Kkok — Gavin Park");
   await expect(page.locator(".case-hero")).toContainText("Core case study");
   await expect(page.getByRole("heading", { name: "Explore the deployed web MVP." })).toBeVisible();
   await expect(page.locator(".demo-guide li")).toHaveCount(3);
@@ -81,8 +85,14 @@ for (const width of [375, 768, 1024, 1440]) {
       }
       if (route === "/") {
         for (const card of await page.locator("#work .project-card").all()) {
-          await expect(card.locator(".project-proof-summary")).toBeVisible();
-          await expect(card.locator(".project-proof-summary dt")).toHaveText(["Problem", "Role", "Decision", "Verified", "Status"]);
+          await expect(card.locator(".project-summary")).toBeVisible();
+          await expect(card.locator(".project-copy dl")).toHaveCount(0);
+          await expect(card.locator(".project-copy .tag-list")).toBeVisible();
+          await expect(card.getByRole("link", { name: /Read the case study/ })).toBeVisible();
+          if (width === 1440) {
+            await expect(card.locator(".project-proof-rail")).toBeVisible();
+            await expect(card.locator(".project-proof-rail .eyebrow")).toHaveText(["Problem", "Decision", "Implementation", "Verification", "Current status"]);
+          }
         }
       }
       for (const link of await page.locator(".hero-actions a, .case-actions a, .case-end a").all()) {

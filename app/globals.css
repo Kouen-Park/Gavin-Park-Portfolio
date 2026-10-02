@@ -69,13 +69,8 @@ button, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 .tag-list li { padding: 4px 8px; border: 1px solid var(--border); color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: .66rem; }
 .project-visual { min-height: 350px; display: grid; place-items: center; overflow: hidden; background: color-mix(in srgb, var(--accent) 8%, white); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border)); }
 .project-visual > img { width: auto; max-height: 480px; object-fit: contain; box-shadow: 0 20px 46px rgba(16,24,23,.12); }
-.project-proof-summary { display: grid; gap: 10px; margin: 26px 0; }
-.project-proof-summary div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; }
-.project-proof-summary dt { color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: .65rem; letter-spacing: .06em; text-transform: uppercase; }
-.project-proof-summary dd { margin: 0; color: #34403d; font-size: .84rem; }
 .project-proof-rail { padding-left: 8px; }
-.project-reviewed, .case-review { color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: .68rem; }
-.project-reviewed { margin: 0 0 20px; }
+.case-review { color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: .68rem; }
 .case-review { margin: 18px 0 0; overflow-wrap: anywhere; }
 .case-access-note { max-width: 780px; margin: 20px 0 0; color: #34403d; font-size: .9rem; }
 .supporting-section { padding-bottom: 110px; }
@@ -206,7 +201,7 @@ button, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 
 @media (max-width: 1180px) {
   .project-card article { grid-template-columns: 30px minmax(0, 1fr) minmax(0, 1.1fr); }
-  /* The five-field proof summary remains visible on every card at these widths. */
+  /* Keep the compact card uncluttered; full evidence is available in its case study. */
   .project-proof-rail { grid-column: 2 / -1; display: none; }
   .method-grid, .case-overview, .evidence-section { gap: 60px; }
   .archive-row { grid-template-columns: 1fr 1fr; }

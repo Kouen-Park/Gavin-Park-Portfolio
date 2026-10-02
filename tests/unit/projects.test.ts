@@ -59,6 +59,7 @@ describe("portfolio project data", () => {
   });
 
   it("provides real web access and distinguishes local-only Noye", () => {
+    expect(getProject("kkok")?.title).toBe("Kkok");
     expect(getProject("kkok")?.liveDemo).toBe("https://www.kkokhaja.today");
     expect(getProject("kkok")?.proof?.verified).toContain("41 two-account production checks");
     expect(getProject("kkok")?.sourceRevision).toContain("18b341f");
@@ -69,6 +70,8 @@ describe("portfolio project data", () => {
     expect(noye.evidence.find(({ stage }) => stage === "Verification")?.detail).toContain("two embedding timeouts");
     expect(noye.limitations.join(" ")).toContain("not green in one run");
     for (const project of projects) {
+      expect(project.cardSummary?.trim().length).toBeGreaterThan(0);
+      expect(project.cardSummary!.length).toBeLessThanOrEqual(150);
       expect(project.proof).toBeDefined();
       expect(project.accessNote?.length).toBeGreaterThan(0);
     }

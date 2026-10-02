@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <section className="case-hero shell">
         <Link className="back-link" href={coreProject ? "/#work" : "/#supporting-work"}><span aria-hidden="true">←</span> {coreProject ? "Selected work" : "Supporting work"}</Link>
         <div className="case-title-grid">
-          <div><p className="eyebrow">{project.featured ? "Featured case study" : coreProject ? "Core case study" : "Supporting case study"} · {project.status}</p><h1 lang={project.slug === "kkok" ? "ko" : undefined}>{project.title}</h1></div>
+          <div><p className="eyebrow">{project.featured ? "Featured case study" : coreProject ? "Core case study" : "Supporting case study"} · {project.status}</p><h1>{project.title}</h1></div>
           <p className="case-outcome">{project.outcome}</p>
         </div>
         <dl className="case-meta">

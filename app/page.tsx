@@ -15,7 +15,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Selected work · 2026</p>
           <h2 id="work-title">Reliable products,<br />different boundaries.</h2>
-          <p>Recoverable scoring, private collaboration, and local AI knowledge. Three core projects, with decisions and dated verification before technology lists.</p>
+          <p>Recoverable scoring, private collaboration, and local AI knowledge. A short introduction here; the decisions and dated evidence live in each case study.</p>
         </div>
         <div className="project-list">{projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}</div>
       </section>

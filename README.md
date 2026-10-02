@@ -28,7 +28,7 @@ E2E builds and starts its own production server on port 3105; it never reuses a 
 
 Project facts live in `data/projects.ts` and were transcribed from the SecondBrain project inventory and repository records. Claims without verified ownership or product outcome data are intentionally labelled as constraints, fixture data, or open work.
 
-The core index is BirdieBuddy → 꼭 (kkok) → Noye. The Thirteenth Disciple remains a supporting case study; Music Webapp remains coursework. SecondBrain is working-method context, and its old case-study URL redirects to `/#method`.
+The core index is BirdieBuddy → Kkok → Noye. The Thirteenth Disciple remains a supporting case study; Music Webapp remains coursework. SecondBrain is working-method context, and its old case-study URL redirects to `/#method`.
 
 See [CONTENT.md](CONTENT.md) for the 2 October 2026 source baselines, test-result boundaries, and demo-access limitations. A source-review date does not mean project tests were rerun or a deployment contains that revision.
 

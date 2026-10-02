@@ -21,6 +21,7 @@ export interface Project {
   slug: string;
   title: string;
   summary: string;
+  cardSummary?: string;
   outcome: string;
   role: string;
   period: string;
@@ -61,6 +62,7 @@ export const projects: Project[] = [
   {
     slug: "birdie-buddy",
     title: "BirdieBuddy",
+    cardSummary: "A web and iOS golf app for live scoring, round history, and practice insights — built to recover saved scores when connections drop.",
     summary: "A golf platform built around recoverable scoring: a mobile-first web beta and a native SwiftUI client with durable local writes and explicit conflict review.",
     outcome: "A public Render web beta and a committed iOS client. Four CI jobs passed, including 27 native tests; physical-device and TestFlight release gates remain open.",
     role: "Independent full-stack and iOS product engineering",
@@ -114,7 +116,8 @@ export const projects: Project[] = [
   },
   {
     slug: "kkok",
-    title: "꼭",
+    title: "Kkok",
+    cardSummary: "A private app for shared goal cards, completion stamps, and photo memories with friends.",
     summary: "An invite-only shared goal-card app: turn little promises into completion stamps and photo memories, while enforcing membership beyond the interface.",
     outcome: "A deployed web MVP with 41 recorded two-account production checks. An iPhone development build now has recorded launch and sign-in evidence; full native journeys and TestFlight remain open.",
     role: "Independent web and mobile product engineering",
@@ -132,8 +135,8 @@ export const projects: Project[] = [
       { stage: "Current status", claim: "Web deployed; iPhone launch/login recorded, not TestFlight.", detail: "The web main baseline is 574af2e. The newer iOS branch at 18b341f records a development-signed build installed and launched on an iPhone 13 mini, with user-confirmed existing-account sign-in and card display. Email callbacks, photos, sharing, restart journeys, release signing, and TestFlight remain separate gates.", source: "Dated physical-device record and iOS release boundary", sourceUrl: kkokRepo + "/blob/18b341f/docs/ios-beta.md", verificationDate: "2026-10-02" },
     ],
     media: [
-      { src: "/images/kkok-mobile.png", alt: "꼭 mobile local-demo preview with shared goal cards and sample memories", width: 390, height: 844, caption: "Repository mobile preview with local sample data; not a physical-iPhone or TestFlight capture." },
-      { src: "/images/kkok-web.jpg", alt: "꼭 desktop web demo with a shared stamp card, completed goals, and photo memories", width: 1280, height: 1456, caption: "Web MVP repository capture in local-demo mode. Sample cards and photos are not real user activity." },
+      { src: "/images/kkok-mobile.png", alt: "Kkok mobile local-demo preview with shared goal cards and sample memories", width: 390, height: 844, caption: "Repository mobile preview with local sample data; not a physical-iPhone or TestFlight capture." },
+      { src: "/images/kkok-web.jpg", alt: "Kkok desktop web demo with a shared stamp card, completed goals, and photo memories", width: 1280, height: 1456, caption: "Web MVP repository capture in local-demo mode. Sample cards and photos are not real user activity." },
     ],
     links: [{ label: "View repository", href: kkokRepo }],
     constraints: [
@@ -150,7 +153,7 @@ export const projects: Project[] = [
       "The production UI is Korean and requires a personal account. Local sample mode is not a shared-account production demo.",
       "Development-signed iPhone launch/login is recorded, but photo/HEIC selection, email deep links, sharing, relaunch, release signing, and TestFlight remain unverified.",
       "The first automatic cleanup execution, ongoing monitoring, and alert receipt need separate operational verification.",
-      "꼭 is a working title. Pricing, realtime collaboration, and full offline sync remain deferred; no retention or group-adoption metric is claimed.",
+      "Kkok is a working title. Pricing, realtime collaboration, and full offline sync remain deferred; no retention or group-adoption metric is claimed.",
       "The iPhone observation applies to a development build on the iOS branch, not a TestFlight release or certification of every native flow.",
     ],
     liveDemo: "https://www.kkokhaja.today",
@@ -168,6 +171,7 @@ export const projects: Project[] = [
   {
     slug: "noye",
     title: "Noye",
+    cardSummary: "A local-first AI workspace for searching personal files, asking source-linked questions, and turning answers into reusable documents.",
     summary: "A local-first AI knowledge workspace that turns personal files into searchable passages, source-linked answers, and editable documents without a required cloud AI API.",
     outcome: "A local web MVP with ingestion, semantic search, cited chat, and Markdown documents. Reliability work adds source hashing, atomic migrations, deep index checks, and non-destructive rebuilds.",
     role: "Independent full-stack and retrieval-system engineering",

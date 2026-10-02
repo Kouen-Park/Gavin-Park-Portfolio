@@ -28,8 +28,8 @@ The portfolio is evaluated in short recruiter scans and deeper technical review.
 
 ## Capabilities and Constraints
 
-- English portfolio copy with a home page and four case-study routes; the product name 꼭 is Korean.
-- Core order: BirdieBuddy, 꼭 (kkok), Noye. BirdieBuddy remains featured.
+- English portfolio copy with a home page and four case-study routes. Kkok is the English display name for the Korean-language shared goal-card app.
+- Core order: BirdieBuddy, Kkok, Noye. BirdieBuddy remains featured.
 - The Thirteenth Disciple is a compact supporting project, not a core entry.
 - SecondBrain is working-method context only; the former route redirects to that section.
 - Music Webapp appears as a compact coursework archive item.
